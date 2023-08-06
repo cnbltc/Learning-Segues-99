@@ -9,7 +9,7 @@ import UIKit
 
 class ViewControllerSecond: UIViewController {
     
-    var labelOneText = "Empty"
+    var labelOneText = "First View failed to send the text."
 
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var labelOne: UILabel!
@@ -17,11 +17,11 @@ class ViewControllerSecond: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelOne.text = labelOneText
+        buttonOne.titleLabel?.text = "Press to go back to View One"
     }
     
     @IBAction func buttonOnePressed(_ sender: UIButton) {
         dismiss(animated: true) {
-            print("Second VC button one pressed.")
         }
     }
 }
